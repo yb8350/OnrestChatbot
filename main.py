@@ -544,26 +544,5 @@ GROUP BY satisSong ORDER BY COUNT(satisSong) DESC LIMIT 3;"""
     }
     return jsonify(res)
 
-
-@application.route('/test', methods=['POST'])
-def test():
-    req = request.get_json()
-    blockId = req["userRequest"]["block"]["id"]
-    res = {
-         "version": "2.0",
-         "template": {
-             "outputs": [
-                 {
-                    "basicCard": {
-                        "title": "블록ID 입니다",
-                        "description": blockId
-                    }
-                }
-              ]
-         }
-     }
-    return jsonify(res)
-
-
 if __name__ == "__main__":
     application.run(host='0.0.0.0')
