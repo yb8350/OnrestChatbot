@@ -545,4 +545,4 @@ GROUP BY satisSong ORDER BY COUNT(satisSong) DESC LIMIT 3;"""
     return jsonify(res)
 
 if __name__ == "__main__":
-    application.run(host='0.0.0.0')
+    application.run(host='0.0.0.0') 
